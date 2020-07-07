@@ -14,6 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import django_heroku
+import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,7 +27,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'pe@7a+k2v%)24a(l)%4%x9v3+2%)#adcwrq8&*-*sbqg8z)jo_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['loginapibd.herokuapp.com','127.0.0.1']
 
@@ -95,7 +96,7 @@ DATABASES = {
         'NAME': 'logindb',
         'USER': 'root',
         'PASSWORD': '',
-        'HOST': 'localhost',
+        'HOST': 'loginapibd.herokuapp.com',
         'PORT': '3306',
     }
 }
